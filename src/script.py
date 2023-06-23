@@ -70,7 +70,7 @@ def predict_outcomes(df):
     return pd.concat([nomem_encr, pd.Series(predictions, name="prediction")], axis=1)
 
 
-def predict(input_path, output):
+def predict(input_path, output): 
     if output is None:
         output = sys.stdout
     df = pd.read_csv(input_path, encoding="latin-1", encoding_errors="replace", low_memory=False)
